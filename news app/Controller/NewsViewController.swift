@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import WebKit
 
 class NewsViewController: UIViewController {
     
@@ -21,7 +22,7 @@ class NewsViewController: UIViewController {
 
    
     @IBAction func readMoreButtonTapped(_ sender: UIButton) {
-        print("button pressed")
+        performSegue(withIdentifier: "readmoreSegue", sender: self)
     }
     
 }
