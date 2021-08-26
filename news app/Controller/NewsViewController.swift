@@ -22,7 +22,12 @@ class NewsViewController: UIViewController {
 
    
     @IBAction func readMoreButtonTapped(_ sender: UIButton) {
-        performSegue(withIdentifier: "readmoreSegue", sender: self)
+        guard let url = URL(string: "https://google.com") else {
+            return
+        }
+        let vc = WebViewController(url: url,title: "google")
+        present(vc, animated: true, completion: nil)
+        
     }
     
 }

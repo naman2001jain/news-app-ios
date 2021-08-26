@@ -115,28 +115,11 @@
                         <outlet property="newsImage" destination="den-zm-eET" id="Kwg-Td-LGV"/>
                         <outlet property="newsTitle" destination="oIx-rT-jJQ" id="0lF-cu-P88"/>
                         <outlet property="shorthandLabel" destination="dkl-4d-69Z" id="RM5-pg-b8f"/>
-                        <segue destination="uNC-Oa-Tca" kind="show" identifier="readmoreSegue" id="7yq-0o-AfZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1855.072463768116" y="88.392857142857139"/>
-        </scene>
-        <!--Web View Controller-->
-        <scene sceneID="7Rl-vs-kWR">
-            <objects>
-                <viewController id="uNC-Oa-Tca" customClass="WebViewController" customModule="news_app" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="clP-pW-0LW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="Ez5-Ik-jQW"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="hk7-S9-noZ"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1jg-Pd-BNc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2787" y="96"/>
         </scene>
         <!--Item-->
         <scene sceneID="tX4-SD-BdU">
