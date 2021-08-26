@@ -16,106 +16,86 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZCU-qQ-fbJ" userLabel="Main View">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="acL-U9-eTY" userLabel="news image">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="367.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UnR-XX-VPN">
+                                <rect key="frame" x="29" y="470.5" width="356" height="304.5"/>
+                                <string key="text">Maruti suzuki india chairman rc bhargava has said that a lot of statements were made by government officials on the importance of the automobile industry butMaruti suzuki india chairman rc bhargava has said that a lot of statements were made by government officials on the importance of the automobile industry butMaruti suzuki india chairman rc bhargava has said that a lot of statements were made by government officials on the importance of the automobile industry buthas said that a lot of statements were made by government official s on the importance of the automobile industry butMaruti suzuki india chairman rc bhargava has said that a lot of sta</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QDM-C1-inn">
+                                <rect key="frame" x="0.0" y="815.5" width="414" height="80.5"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="den-zm-eET" userLabel="news image">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="367.5"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h1D-4h-UYB">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="80.5"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="World won't help auto sector, need action from govt: Maruti chairman" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIx-rT-jJQ" userLabel="news title">
-                                        <rect key="frame" x="29" y="392.5" width="358" height="53"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPP-4q-0DZ">
-                                        <rect key="frame" x="29" y="470.5" width="356" height="304.5"/>
-                                        <string key="text">Maruti suzuki india chairman rc bhargava has said that a lot of statements were made by government officials on the importance of the automobile industry butMaruti suzuki india chairman rc bhargava has said that a lot of statements were made by government officials on the importance of the automobile industry butMaruti suzuki india chairman rc bhargava has said that a lot of statements were made by government officials on the importance of the automobile industry buthas said that a lot of statements were made by government official s on the importance of the automobile industry butMaruti suzuki india chairman rc bhargava has said that a lot of sta</string>
-                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Hq-Ol-5XO">
-                                        <rect key="frame" x="0.0" y="815.5" width="414" height="80.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="-25" translatesAutoresizingMaskIntoConstraints="NO" id="Ggx-X6-M0Y">
+                                        <rect key="frame" x="29" y="10" width="159.5" height="60.5"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1N2-Rd-jcH">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="80.5"/>
-                                            </imageView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="-25" translatesAutoresizingMaskIntoConstraints="NO" id="Hgx-EX-Al9">
-                                                <rect key="frame" x="29" y="10" width="159.5" height="60.5"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is shorthand " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkl-4d-69Z">
-                                                        <rect key="frame" x="0.0" y="0.0" width="159.5" height="42.5"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to read more" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQ7-9i-v7T">
-                                                        <rect key="frame" x="0.0" y="17.5" width="159.5" height="43"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jjb-aN-ogk" userLabel="Tap button">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="80.5"/>
-                                                <connections>
-                                                    <action selector="readMoreButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZjA-jz-ikx"/>
-                                                </connections>
-                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is shorthand " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hpd-XZ-8sO">
+                                                <rect key="frame" x="0.0" y="0.0" width="159.5" height="42.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to read more" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="588-ab-lck">
+                                                <rect key="frame" x="0.0" y="17.5" width="159.5" height="43"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
-                                        <constraints>
-                                            <constraint firstItem="1N2-Rd-jcH" firstAttribute="leading" secondItem="4Hq-Ol-5XO" secondAttribute="leading" id="17A-Uj-tME"/>
-                                            <constraint firstAttribute="bottom" secondItem="Hgx-EX-Al9" secondAttribute="bottom" constant="10" id="3qX-nu-pa2"/>
-                                            <constraint firstAttribute="bottom" secondItem="1N2-Rd-jcH" secondAttribute="bottom" id="Cnr-yz-5Xt"/>
-                                            <constraint firstItem="Hgx-EX-Al9" firstAttribute="leading" secondItem="4Hq-Ol-5XO" secondAttribute="leading" constant="29" id="EhV-Ki-7rz"/>
-                                            <constraint firstItem="jjb-aN-ogk" firstAttribute="leading" secondItem="4Hq-Ol-5XO" secondAttribute="leading" id="Iuq-EN-zxW"/>
-                                            <constraint firstAttribute="trailing" secondItem="jjb-aN-ogk" secondAttribute="trailing" id="OTQ-C7-v6l"/>
-                                            <constraint firstItem="1N2-Rd-jcH" firstAttribute="top" secondItem="4Hq-Ol-5XO" secondAttribute="top" id="TmN-lx-GnA"/>
-                                            <constraint firstItem="Hgx-EX-Al9" firstAttribute="top" secondItem="4Hq-Ol-5XO" secondAttribute="top" constant="10" id="VZ9-tw-n8f"/>
-                                            <constraint firstAttribute="bottom" secondItem="jjb-aN-ogk" secondAttribute="bottom" id="ggO-5p-KDm"/>
-                                            <constraint firstItem="jjb-aN-ogk" firstAttribute="top" secondItem="4Hq-Ol-5XO" secondAttribute="top" id="kbF-1F-kqD"/>
-                                            <constraint firstAttribute="trailing" secondItem="1N2-Rd-jcH" secondAttribute="trailing" id="z6u-Ve-Qvc"/>
-                                        </constraints>
-                                    </view>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yZZ-Mg-ZEx" userLabel="Tap button">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="80.5"/>
+                                        <connections>
+                                            <action selector="readMoreButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7ue-TN-IfB"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <constraints>
-                                    <constraint firstItem="lPP-4q-0DZ" firstAttribute="top" secondItem="oIx-rT-jJQ" secondAttribute="bottom" constant="25" id="3bK-ch-ka7"/>
-                                    <constraint firstItem="oIx-rT-jJQ" firstAttribute="leading" secondItem="ZCU-qQ-fbJ" secondAttribute="leading" constant="29" id="5d1-hH-AFS"/>
-                                    <constraint firstAttribute="trailing" secondItem="4Hq-Ol-5XO" secondAttribute="trailing" id="ECn-jL-eT4"/>
-                                    <constraint firstAttribute="trailing" secondItem="den-zm-eET" secondAttribute="trailing" id="Fo9-GA-cB9"/>
-                                    <constraint firstItem="oIx-rT-jJQ" firstAttribute="top" secondItem="den-zm-eET" secondAttribute="bottom" constant="25" id="H6g-Xe-YAy"/>
-                                    <constraint firstItem="4Hq-Ol-5XO" firstAttribute="height" secondItem="ZCU-qQ-fbJ" secondAttribute="height" multiplier="0.09" id="LO8-90-lEJ"/>
-                                    <constraint firstItem="den-zm-eET" firstAttribute="top" secondItem="ZCU-qQ-fbJ" secondAttribute="top" id="NvK-aj-hll"/>
-                                    <constraint firstAttribute="trailing" secondItem="lPP-4q-0DZ" secondAttribute="trailing" constant="29" id="SNM-BB-Zex"/>
-                                    <constraint firstItem="den-zm-eET" firstAttribute="height" secondItem="ZCU-qQ-fbJ" secondAttribute="height" multiplier="0.41" id="SdK-Gw-orA"/>
-                                    <constraint firstItem="4Hq-Ol-5XO" firstAttribute="leading" secondItem="ZCU-qQ-fbJ" secondAttribute="leading" id="Zsu-zd-PEa"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="oIx-rT-jJQ" secondAttribute="trailing" constant="20" symbolic="YES" id="kp3-no-9hW"/>
-                                    <constraint firstItem="den-zm-eET" firstAttribute="leading" secondItem="ZCU-qQ-fbJ" secondAttribute="leading" id="lwu-rR-Psr"/>
-                                    <constraint firstItem="lPP-4q-0DZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ZCU-qQ-fbJ" secondAttribute="leading" constant="29" id="uZx-Om-eIi"/>
-                                    <constraint firstAttribute="bottom" secondItem="4Hq-Ol-5XO" secondAttribute="bottom" id="wpj-Ou-NWe"/>
+                                    <constraint firstAttribute="trailing" secondItem="yZZ-Mg-ZEx" secondAttribute="trailing" id="0WL-gI-eXn"/>
+                                    <constraint firstAttribute="bottom" secondItem="yZZ-Mg-ZEx" secondAttribute="bottom" id="EyH-gH-VKX"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ggx-X6-M0Y" secondAttribute="bottom" constant="10" id="JRE-ft-kFG"/>
+                                    <constraint firstAttribute="bottom" secondItem="h1D-4h-UYB" secondAttribute="bottom" id="S4f-uq-Pmv"/>
+                                    <constraint firstItem="Ggx-X6-M0Y" firstAttribute="leading" secondItem="QDM-C1-inn" secondAttribute="leading" constant="29" id="TPF-Fq-sB3"/>
+                                    <constraint firstItem="yZZ-Mg-ZEx" firstAttribute="leading" secondItem="QDM-C1-inn" secondAttribute="leading" id="b7W-Il-0vQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="h1D-4h-UYB" secondAttribute="trailing" id="eXT-aR-5qL"/>
+                                    <constraint firstItem="Ggx-X6-M0Y" firstAttribute="top" secondItem="QDM-C1-inn" secondAttribute="top" constant="10" id="mDV-Jz-gyF"/>
+                                    <constraint firstItem="yZZ-Mg-ZEx" firstAttribute="top" secondItem="QDM-C1-inn" secondAttribute="top" id="obV-Pg-ORl"/>
+                                    <constraint firstItem="h1D-4h-UYB" firstAttribute="leading" secondItem="QDM-C1-inn" secondAttribute="leading" id="tpb-M9-MPV"/>
+                                    <constraint firstItem="h1D-4h-UYB" firstAttribute="top" secondItem="QDM-C1-inn" secondAttribute="top" id="ugV-lE-Doc"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="World won't help auto sector, need action from govt: Maruti chairman" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0d-wA-Rmn" userLabel="news title">
+                                <rect key="frame" x="29" y="392.5" width="356" height="53"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="ZCU-qQ-fbJ" secondAttribute="bottom" id="BG2-2Q-7wm"/>
-                            <constraint firstItem="ZCU-qQ-fbJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JGF-9u-ahg"/>
-                            <constraint firstItem="ZCU-qQ-fbJ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="dHO-58-xd9"/>
-                            <constraint firstItem="ZCU-qQ-fbJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fGj-mU-Hzg"/>
+                            <constraint firstAttribute="bottom" secondItem="QDM-C1-inn" secondAttribute="bottom" id="3Kh-3V-veN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="O0d-wA-Rmn" secondAttribute="trailing" constant="29" id="6ea-Of-BzD"/>
+                            <constraint firstItem="acL-U9-eTY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Gzi-ED-2m1"/>
+                            <constraint firstItem="UnR-XX-VPN" firstAttribute="top" secondItem="O0d-wA-Rmn" secondAttribute="bottom" constant="25" id="HgF-4F-eV5"/>
+                            <constraint firstItem="O0d-wA-Rmn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="29" id="LwX-cb-5wh"/>
+                            <constraint firstItem="acL-U9-eTY" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.41" id="Mkf-7y-eZV"/>
+                            <constraint firstItem="acL-U9-eTY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="MqJ-Fd-Idf"/>
+                            <constraint firstItem="QDM-C1-inn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="PoB-Lo-6gb"/>
+                            <constraint firstItem="QDM-C1-inn" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.09" id="cXj-gx-zCL"/>
+                            <constraint firstItem="O0d-wA-Rmn" firstAttribute="top" secondItem="acL-U9-eTY" secondAttribute="bottom" constant="25" id="gKq-DC-is1"/>
+                            <constraint firstItem="QDM-C1-inn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mI6-Mr-aDe"/>
+                            <constraint firstItem="acL-U9-eTY" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vTk-Ef-O8Y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UnR-XX-VPN" secondAttribute="trailing" constant="29" id="vqP-C4-M9v"/>
+                            <constraint firstItem="UnR-XX-VPN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="29" id="zbb-9S-9fI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lZk-II-UJm"/>
-                    <connections>
-                        <outlet property="newsDescription" destination="lPP-4q-0DZ" id="LUW-1I-OM9"/>
-                        <outlet property="newsImage" destination="den-zm-eET" id="Kwg-Td-LGV"/>
-                        <outlet property="newsTitle" destination="oIx-rT-jJQ" id="0lF-cu-P88"/>
-                        <outlet property="shorthandLabel" destination="dkl-4d-69Z" id="RM5-pg-b8f"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
