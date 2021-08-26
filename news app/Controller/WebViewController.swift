@@ -33,10 +33,25 @@ class WebViewController: UIViewController {
         super.viewDidLoad()
         view.addSubview(webview)
         webview.load(URLRequest(url: url))
+        configureButtons()
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         webview.frame = view.bounds
     }
-
+    
+    private func configureButtons(){
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "done", style: .done, target: self, action: #selector(doneButtonPressed))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(refreshButtonPressed))
+    }
+    
+    //MARK:- objc functions
+    @objc func doneButtonPressed(){
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func refreshButtonPressed(){
+        webview.load(URLRequest(url: url))
+    }
 }
+

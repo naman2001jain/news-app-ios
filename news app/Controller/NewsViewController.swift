@@ -26,7 +26,8 @@ class NewsViewController: UIViewController {
             return
         }
         let vc = WebViewController(url: url,title: "google")
-        present(vc, animated: true, completion: nil)
+        let navVc = UINavigationController(rootViewController: vc)
+        present(navVc, animated: true)
         
     }
     
