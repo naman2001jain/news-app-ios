@@ -9,6 +9,7 @@ import UIKit
 
 struct News {
     let title: String
+    let shortHandDescription: String
     let description: String
     let image: UIImage
     let url: URL
