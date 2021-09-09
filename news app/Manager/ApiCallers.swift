@@ -32,6 +32,7 @@ class ApiCallers{
             }else if let data = data{
                 do{
                     let result = try JSONDecoder().decode(ApiResponse.self, from: data)
+                    completion(.success(result))
                 }
                 catch{
                     completion(.failure(error))

@@ -10,7 +10,8 @@ import WebKit
 
 class NewsViewController: UIViewController, UICollectionViewDelegate {
     
-    
+    //some variables
+    var response: ApiResponse!
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -20,7 +21,8 @@ class NewsViewController: UIViewController, UICollectionViewDelegate {
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: "NewsPostUICollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "NewsPost")
         collectionView.collectionViewLayout = UICollectionViewFlowLayout()
-//        collectionView.isPagingEnabled = true
+        
+        fetchNewsDetails()
         
     }
     
@@ -29,22 +31,32 @@ class NewsViewController: UIViewController, UICollectionViewDelegate {
         super.viewWillAppear(true)
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
+    
+    
     private func fetchNewsDetails(){
         ApiCallers.shared.getTopHeadlines { (res) in
-            
-            switch res{
-            case .success(let model):
-                print("success")
-                print(model.totalResults)
-                break
-                
-            case .failure(let err):
-                self.failedToFetchNewsDetails()
-                print(err.localizedDescription)
+            DispatchQueue.main.async {
+                switch res{
+                case .success(let model):
+                    self.updateUI(with : model)
+                    
+                    print("success")
+                    break
+                    
+                case .failure(let err):
+                    self.failedToFetchNewsDetails()
+                    print(err.localizedDescription)
+                }
             }
+            
             
         }
         
+    }
+    
+    private func updateUI(with model: ApiResponse){
+        response = model
+        collectionView.reloadData()
     }
     
     func failedToFetchNewsDetails(){
@@ -56,14 +68,20 @@ class NewsViewController: UIViewController, UICollectionViewDelegate {
 
 extension NewsViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return response?.totalResults ?? 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NewsPost", for: indexPath) as! NewsPostUICollectionViewCell
-        cell.configureCell(shortTitle: "this is a short title", newsTitle: "One day, covid-19 will be knows as maharastra corona", newsDescription: "this is a description. and here a long paragraph will comethis is a description. and here a long paragraph will comethis is a description. and here a long paragraph will comethis is a description. and here a long paragraph will comethis is a description. and here a long paragraph will comethis is a description. and here a long paragraph will comethis is a description. and here a long paragraph will comethis is a description. and here a long paragraph will come", newsImage: UIImage(named: "pic")!)
+        let article = response?.articles[indexPath.row]
+        
+        cell.configureCell(shortTitle: (article?.title) ??  "title", newsTitle:  (article?.title) ?? "title", newsDescription: (article?.content) ??  "news description", newsImage: UIImage(named: "pic")!)
+        
+        
+        
         return cell
     }
+    
 }
 
 
