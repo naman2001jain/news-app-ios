@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wMS-HR-6Tk">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="EHi-YG-pUw">
                                     <size key="itemSize" width="128" height="128"/>
@@ -33,7 +33,7 @@
                         <constraints>
                             <constraint firstItem="wMS-HR-6Tk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="7Wy-hZ-gK4"/>
                             <constraint firstAttribute="trailing" secondItem="wMS-HR-6Tk" secondAttribute="trailing" id="JaW-7m-HSz"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wMS-HR-6Tk" secondAttribute="bottom" id="U0K-7f-XvZ"/>
+                            <constraint firstAttribute="bottom" secondItem="wMS-HR-6Tk" secondAttribute="bottom" id="U0K-7f-XvZ"/>
                             <constraint firstItem="wMS-HR-6Tk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="URU-sN-eWf"/>
                         </constraints>
                     </view>

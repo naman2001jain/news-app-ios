@@ -74,8 +74,10 @@ extension NewsViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NewsPost", for: indexPath) as! NewsPostUICollectionViewCell
         let article = response?.articles[indexPath.row]
+        DispatchQueue.main.async {
+            cell.configureCell(shortTitle: (article?.title) ??  "title", newsTitle:  (article?.title) ?? "title", newsDescription: (article?.content) ??  "news description", newsImage: (article?.urlToImage) ?? "")
+        }
         
-        cell.configureCell(shortTitle: (article?.title) ??  "title", newsTitle:  (article?.title) ?? "title", newsDescription: (article?.content) ??  "news description", newsImage: UIImage(named: "pic")!)
         
         
         

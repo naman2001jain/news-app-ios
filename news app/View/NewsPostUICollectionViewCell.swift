@@ -22,12 +22,20 @@ class NewsPostUICollectionViewCell: UICollectionViewCell {
         shortTitle: String,
         newsTitle: String,
         newsDescription: String,
-        newsImage: UIImage
+        newsImage: String
     ){
-        self.shortTitle.text = shortTitle
-        self.newsTitle.text = newsTitle
-        self.newsDescription.text = newsDescription
-        self.newsImage.image = newsImage
+        DispatchQueue.main.async {
+            self.shortTitle.text = shortTitle
+            self.newsTitle.text = newsTitle
+            self.newsDescription.text = newsDescription
+            if let url = URL(string: newsImage){
+                // Fetch Image Data
+                if let data = try? Data(contentsOf: url) {
+                    // Create Image and Update Image View
+                    self.newsImage.image = UIImage(data: data)
+                }
+            }
+        }
     }
     
     
