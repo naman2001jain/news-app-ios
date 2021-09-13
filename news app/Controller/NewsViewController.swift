@@ -59,6 +59,17 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, NewsPostCo
         refreshControl.addTarget(self, action: #selector(handleRefreshing), for: .valueChanged)
         //adding the floating view to the view
         view.addSubview(floatingButton)
+        
+///        adding swipe guestures
+        //adding swipeleftgesture
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(respondToSwipeLeftGesture))
+        swipeLeft.direction = .left
+        self.view.addGestureRecognizer(swipeLeft)
+        //adding swipe right gesture
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(respondToSwipeRightGesture))
+        swipeRight.direction = .right
+        self.view.addGestureRecognizer(swipeRight)
+        
     }
     
     
@@ -71,6 +82,15 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, NewsPostCo
         super.viewDidLayoutSubviews()
         floatingButton.frame = CGRect(x: (view.frame.size.width - 60)/2,
                                       y: view.frame.size.height - 60*2 - view.safeAreaInsets.bottom, width: 60, height: 60)
+    }
+    
+    //swipe guesture
+    @objc func respondToSwipeLeftGesture(){
+        self.didPressedReadMoreButton()
+    }
+    
+    @objc func respondToSwipeRightGesture(){
+        print("right gesture")
     }
     
     @objc func arrowButtonTapped(){
