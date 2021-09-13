@@ -12,8 +12,24 @@ class NewsViewController: UIViewController, UICollectionViewDelegate {
     
     //some variables
     var response: ApiResponse!
-    
+    private let refreshControl = UIRefreshControl()
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    //floating button
+    private let floatingButton: UIButton = {
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
+        //appearance
+        button.tintColor = .link
+        button.backgroundColor = .label
+        let image = UIImage(systemName: "arrow.up",withConfiguration: UIImage.SymbolConfiguration(pointSize: 28, weight: .medium))
+        button.setImage(image, for: .normal)
+        //corner radius
+        button.layer.masksToBounds = true
+        button.layer.cornerRadius = 30
+        button.addTarget(self, action: #selector(arrowButtonTapped), for: .touchUpInside)
+        return button
+    }()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +39,10 @@ class NewsViewController: UIViewController, UICollectionViewDelegate {
         collectionView.collectionViewLayout = UICollectionViewFlowLayout()
         
         fetchNewsDetails()
-        
+        collectionView.addSubview(refreshControl)
+        refreshControl.addTarget(self, action: #selector(handleRefreshing), for: .valueChanged)
+        //adding the floating view to the view
+        view.addSubview(floatingButton)
     }
     
     
@@ -32,13 +51,24 @@ class NewsViewController: UIViewController, UICollectionViewDelegate {
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        floatingButton.frame = CGRect(x: (view.frame.size.width - 60)/2,
+                                      y: view.frame.size.height - 60*2 - view.safeAreaInsets.bottom, width: 60, height: 60)
+    }
     
-    private func fetchNewsDetails(){
+    @objc func arrowButtonTapped(){
+        print("arror button pressed")
+        self.collectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
+    }
+    
+     private func fetchNewsDetails(){
         ApiCallers.shared.getTopHeadlines { (res) in
             DispatchQueue.main.async {
                 switch res{
                 case .success(let model):
                     self.updateUI(with : model)
+                    self.refreshControl.endRefreshing()
                     
                     print("success")
                     break
@@ -63,6 +93,11 @@ class NewsViewController: UIViewController, UICollectionViewDelegate {
         print("error to fetch news details")
     }
     
+    @objc private func handleRefreshing(){
+        fetchNewsDetails()
+        
+    }
+    
     
 }
 
@@ -72,14 +107,15 @@ extension NewsViewController: UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if indexPath.row == 19{
+            print("refresh needed")
+            
+        }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NewsPost", for: indexPath) as! NewsPostUICollectionViewCell
         let article = response?.articles[indexPath.row]
         DispatchQueue.main.async {
-            cell.configureCell(shortTitle: (article?.title) ??  "title", newsTitle:  (article?.title) ?? "title", newsDescription: (article?.content) ??  "news description", newsImage: (article?.urlToImage) ?? "")
+            cell.configureCell(shortTitle: (article?.title) ??  "News Title", newsTitle:  (article?.title) ?? "News Title", newsDescription: (article?.content) ??  "No Description Available... swipe left to see full details.", newsImage: (article?.urlToImage) ?? "")
         }
-        
-        
-        
         
         return cell
     }
