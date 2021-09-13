@@ -10,7 +10,10 @@ import WebKit
 
 class NewsViewController: UIViewController, UICollectionViewDelegate, NewsPostCollectionViewCellDelegate {
     
-    
+    @IBAction func refreshBarButtonPressed(_ sender: UIBarButtonItem) {
+        self.handleRefreshing()
+        collectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
+    }
     
     func didPressedReadMoreButton() {
         if let url = newsPostUrl{

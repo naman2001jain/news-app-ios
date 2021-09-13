@@ -17,6 +17,7 @@ class NewsPostUICollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var newsTitle: UILabel!
     @IBOutlet weak var newsDescription: UILabel!
     @IBOutlet weak var newsImage: UIImageView!
+    @IBOutlet weak var bottomViewImage: UIImageView!
     
     weak var newsPostCellDelegate: NewsPostCollectionViewCellDelegate?
     
@@ -41,6 +42,7 @@ class NewsPostUICollectionViewCell: UICollectionViewCell {
                 if let data = try? Data(contentsOf: url) {
                     // Create Image and Update Image View
                     self.newsImage.image = UIImage(data: data)
+                    self.bottomViewImage.image = UIImage(data: data)
                 }
             }
         }

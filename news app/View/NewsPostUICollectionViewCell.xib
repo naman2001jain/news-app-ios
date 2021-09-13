@@ -37,6 +37,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IoZ-fa-peD">
                                 <rect key="frame" x="0.0" y="600.5" width="389" height="66.5"/>
                                 <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchScreenLogo" translatesAutoresizingMaskIntoConstraints="NO" id="v1U-Zs-mNd" userLabel="bottomViewImage">
+                                        <rect key="frame" x="0.0" y="0.0" width="389" height="66.5"/>
+                                    </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="-30" translatesAutoresizingMaskIntoConstraints="NO" id="eMY-tz-hTi">
                                         <rect key="frame" x="20" y="0.0" width="349" height="66.5"/>
                                         <subviews>
@@ -61,16 +64,19 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="eMY-tz-hTi" secondAttribute="bottom" id="3D6-9b-XC4"/>
                                     <constraint firstItem="eMY-tz-hTi" firstAttribute="top" secondItem="IoZ-fa-peD" secondAttribute="top" id="6H4-wf-EEo"/>
                                     <constraint firstAttribute="trailing" secondItem="FX7-U6-6gN" secondAttribute="trailing" id="By9-tD-gGI"/>
                                     <constraint firstAttribute="bottom" secondItem="FX7-U6-6gN" secondAttribute="bottom" id="K9q-Le-Ex0"/>
+                                    <constraint firstItem="v1U-Zs-mNd" firstAttribute="leading" secondItem="IoZ-fa-peD" secondAttribute="leading" id="QKb-T6-gxw"/>
+                                    <constraint firstAttribute="bottom" secondItem="v1U-Zs-mNd" secondAttribute="bottom" id="V4N-SA-4CO"/>
                                     <constraint firstItem="eMY-tz-hTi" firstAttribute="leading" secondItem="IoZ-fa-peD" secondAttribute="leading" constant="20" id="q4g-nw-D3d"/>
                                     <constraint firstAttribute="trailing" secondItem="eMY-tz-hTi" secondAttribute="trailing" constant="20" id="rT3-r1-lTA"/>
+                                    <constraint firstAttribute="trailing" secondItem="v1U-Zs-mNd" secondAttribute="trailing" id="s4Z-xW-T6k"/>
                                     <constraint firstItem="FX7-U6-6gN" firstAttribute="top" secondItem="IoZ-fa-peD" secondAttribute="top" id="syE-TV-xye"/>
                                     <constraint firstItem="FX7-U6-6gN" firstAttribute="leading" secondItem="IoZ-fa-peD" secondAttribute="leading" id="yIe-PE-l67"/>
+                                    <constraint firstItem="v1U-Zs-mNd" firstAttribute="top" secondItem="IoZ-fa-peD" secondAttribute="top" id="z24-hF-0wN"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -103,6 +109,7 @@
             </constraints>
             <size key="customSize" width="389" height="667"/>
             <connections>
+                <outlet property="bottomViewImage" destination="v1U-Zs-mNd" id="GxZ-29-75F"/>
                 <outlet property="newsDescription" destination="urV-M7-Qf2" id="CuK-Wd-YVg"/>
                 <outlet property="newsImage" destination="HT0-m9-4pr" id="UmV-3m-gux"/>
                 <outlet property="newsTitle" destination="Oxy-qX-amn" id="rFb-sb-8nJ"/>
@@ -112,11 +119,9 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="launchScreenLogo" width="1200" height="1200"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
