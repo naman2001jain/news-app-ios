@@ -7,11 +7,19 @@
 
 import UIKit
 
+
+protocol NewsPostCollectionViewCellDelegate: AnyObject{
+    func didPressedReadMoreButton()
+}
+
 class NewsPostUICollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var shortTitle: UILabel!
     @IBOutlet weak var newsTitle: UILabel!
     @IBOutlet weak var newsDescription: UILabel!
     @IBOutlet weak var newsImage: UIImageView!
+    
+    weak var newsPostCellDelegate: NewsPostCollectionViewCellDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -38,7 +46,11 @@ class NewsPostUICollectionViewCell: UICollectionViewCell {
         }
     }
     
-    
+    private func readMoreAction(){
+        if let del = newsPostCellDelegate{
+            del.didPressedReadMoreButton()
+        }
+    }
     
     @IBAction func readMoreButtonTapped(_ sender: UIButton) {
 //        guard let url = URL(string: getNewsUrl()) else {
@@ -47,7 +59,7 @@ class NewsPostUICollectionViewCell: UICollectionViewCell {
 //
 //        let vc = WebViewController(url: url,title: "google")
 //        let navVc = UINavigationController(rootViewController: vc)
-//
+        readMoreAction()
         print("read more button tapped")
     }
     

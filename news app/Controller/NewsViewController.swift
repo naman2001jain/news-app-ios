@@ -8,9 +8,22 @@
 import UIKit
 import WebKit
 
-class NewsViewController: UIViewController, UICollectionViewDelegate {
+class NewsViewController: UIViewController, UICollectionViewDelegate, NewsPostCollectionViewCellDelegate {
+    
+    
+    
+    func didPressedReadMoreButton() {
+        if let url = newsPostUrl{
+            let webVc = WebViewController(url: url, title: "Read More")
+            let navVc = UINavigationController(rootViewController: webVc)
+            present(navVc, animated: true, completion: nil)
+        }
+    }
+    
     
     //some variables
+    var newsPostUrl: URL?
+    
     var response: ApiResponse!
     private let refreshControl = UIRefreshControl()
     @IBOutlet weak var collectionView: UICollectionView!
@@ -58,7 +71,6 @@ class NewsViewController: UIViewController, UICollectionViewDelegate {
     }
     
     @objc func arrowButtonTapped(){
-        print("arror button pressed")
         self.collectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
     }
     
@@ -112,12 +124,20 @@ extension NewsViewController: UICollectionViewDataSource{
             
         }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NewsPost", for: indexPath) as! NewsPostUICollectionViewCell
+        cell.newsPostCellDelegate = self
         let article = response?.articles[indexPath.row]
         DispatchQueue.main.async {
             cell.configureCell(shortTitle: (article?.title) ??  "News Title", newsTitle:  (article?.title) ?? "News Title", newsDescription: (article?.content) ??  "No Description Available... swipe left to see full details.", newsImage: (article?.urlToImage) ?? "")
         }
-        
         return cell
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        for cell in collectionView.visibleCells{
+            let currentCellIndexPath = collectionView.indexPath(for: cell)
+            let urlString = response.articles[currentCellIndexPath!.row].url
+            newsPostUrl = URL(string: urlString ?? "")
+        }
     }
     
 }
